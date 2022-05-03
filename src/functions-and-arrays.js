@@ -114,9 +114,19 @@ console.log(uniquifyArray(wordsUnique));
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(theArray, theGuess) {
+  if (theArray.length === 0) {
+    return null;
+  } else {
+    if (theArray.includes(theGuess)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 
-
+console.log(doesWordExist(wordsFind, "machine"));
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -133,9 +143,17 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(anArray, aWord) {
+  let countWord = 0;
+  for (let i = 0; i < anArray.length; i += 1) {
+    if (aWord === anArray[i]) {
+      countWord += 1;
+    }
+  }
+  return countWord;
+}
 
-
+console.log(howManyTimes(wordsCount, "matter"));
 
 // Iteration #8: Bonus
 const matrix = [
